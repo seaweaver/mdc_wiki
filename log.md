@@ -17,3 +17,11 @@
 - Updated `SCHEMA.md` with bilingual naming and agent-first organization rules
 - Rewrote `index.md` into mixed Chinese-English, agent-first navigation
 - Prepared standards entry point for future page templates
+
+## [2026-04-15] create | Ant selection pilot pages
+
+- Created scenario page: `scenarios-and-projects/ant-selection-pilot.md`
+- Created metric framework page: `rules-and-metrics/ant-selection-metric-framework.md`
+- Created lane rule pages for `求赚纯债`、`求赚固收`、`定开场景`、`超额宝`、`增益宝`、`FOF`
+- Created post-submission monitoring rule page covering warning ladders and drawdown exemptions
+- Updated `index.md` to register the first pilot knowledge pages
