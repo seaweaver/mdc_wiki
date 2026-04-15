@@ -32,3 +32,9 @@
 - Updated `SCHEMA.md` to require Chinese-first page content with English path stability
 - Rewrote `index.md` to use Chinese-first descriptions and entry labels
 - Updated page templates and data object writing guidance to prefer Chinese-first body content
+
+## [2026-04-15] create | Ant selection verification cases
+
+- Created `scenarios-and-projects/ant-selection-verification-cases.md`
+- Added business-facing verification cases to prove agent can use skill + wiki for Ant selection Q&A
+- Updated `index.md` to register the verification entry page

@@ -50,6 +50,7 @@
 
 入口页面：
 - [[scenarios-and-projects/ant-selection-pilot]] - 蚂蚁选品试点场景
+- [[scenarios-and-projects/ant-selection-verification-cases]] - 蚂蚁选品验证案例
 
 ## Capabilities｜能力资产
 

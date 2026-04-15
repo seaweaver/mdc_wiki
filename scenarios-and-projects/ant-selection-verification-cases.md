@@ -1,0 +1,251 @@
+---
+title: "Ant Selection Verification Cases｜蚂蚁选品验证案例"
+aliases:
+  - 蚂蚁选品验证
+  - 蚂蚁选品测试用例
+  - 蚂蚁提报问答验证
+created: 2026-04-15
+updated: 2026-04-15
+type: scenario
+tags: [scenario, verification, testing, fund, strategy, retail, internal]
+keywords: [验证案例, 测试案例, 蚂蚁选品问答, agent验证, 蚂蚁提报测试]
+sources: [scenarios-and-projects/ant-selection-pilot.md]
+status: active
+---
+
+# Ant Selection Verification Cases｜蚂蚁选品验证案例
+
+## 概览｜Overview
+
+本页用于验证一件事：
+
+> 当业务人员把 `mdc-wiki` skill 和当前 wiki 一起交给自己的 agent 时，agent 是否能够基于已有知识页，回答蚂蚁选品场景下的典型问题。
+
+这里的验证重点不是“模型会不会自由发挥”，而是：
+- 能不能命中正确页面
+- 能不能给出结构化回答
+- 能不能识别赛道差异
+- 能不能区分“已知规则”和“当前 wiki 尚未沉淀的内容”
+
+## 验证前提｜Preconditions
+
+验证前，agent 应满足以下前提：
+
+1. 已成功加载 `mdc-wiki` skill
+2. 已将本项目 `D:\Dropbox\Project\mdc_wiki` 作为 wiki 根目录
+3. 能够按 skill 规范先读：
+   - `SCHEMA.md`
+   - `index.md`
+   - `log.md`
+4. 能在回答前搜索相关页面，而不是只依赖单页
+
+## 通过标准｜Pass Criteria
+
+一个问答样例判定为“通过”，至少满足：
+
+1. 回答引用或明确基于正确的 wiki 页面
+2. 回答不混淆不同赛道或不同口径
+3. 回答能指出关键阈值、限制条件或豁免逻辑
+4. 如果 wiki 里没有足够信息，agent 能明确说出缺口，而不是编造
+
+## Case 1｜规则定位能力
+
+### 用户问题
+
+“蚂蚁选品里，求赚纯债赛道主要看哪些指标？”
+
+### 预期命中页面
+
+- [[rules-and-metrics/ant-qiuzhuan-pure-bond-rule]]
+- [[rules-and-metrics/ant-selection-metric-framework]]
+
+### 预期回答要点
+
+- 应能区分短债、中短债、中长债
+- 应覆盖：
+  - 成立时长
+  - 基金规模
+  - 基金经理
+  - 相对收益
+  - 持有体验
+  - 最大回撤
+  - 最大日回撤
+  - 久期和持有期
+
+### 失败信号
+
+- 只泛泛而谈“看收益和回撤”
+- 把固收+规则混进纯债赛道
+- 漏掉结构性约束，如久期和持有期
+
+## Case 2｜赛道差异识别能力
+
+### 用户问题
+
+“求赚固收和增益宝的核心差别是什么？”
+
+### 预期命中页面
+
+- [[rules-and-metrics/ant-qiuzhuan-fixed-income-plus-rule]]
+- [[rules-and-metrics/ant-zengyibao-rule]]
+- [[rules-and-metrics/ant-selection-metric-framework]]
+
+### 预期回答要点
+
+- 应指出两者都看含权仓位和回撤，但定位不同
+- 应指出：
+  - 求赚固收更强调年化收益和滚动持有正收益/超额胜率
+  - 增益宝更强调近 1 年收益、年度回撤和持有 1 年正收益体验
+- 应指出波动分层相似，但收益阈值和体验阈值不同
+
+### 失败信号
+
+- 把两者回答成同一套规则
+- 只列数字，不解释业务差异
+
+## Case 3｜定开豁免解释能力
+
+### 用户问题
+
+“为什么定开场景可以放松回撤要求？具体放松了哪些东西？”
+
+### 预期命中页面
+
+- [[rules-and-metrics/ant-dingkai-rule]]
+- [[rules-and-metrics/ant-qiuzhuan-pure-bond-rule]]
+- [[rules-and-metrics/ant-qiuzhuan-fixed-income-plus-rule]]
+
+### 预期回答要点
+
+- 应明确：定开并不是完全另起一套规则，而是在满足封闭期正胜率条件时触发豁免
+- 应说明豁免内容：
+  - 回撤阈值放松 25%
+  - 豁免滚动正胜率约束
+  - 豁免最大日回撤约束
+- 应说明不同赛道对应的条件不同
+
+### 失败信号
+
+- 回答成“定开产品都可以放宽”
+- 没提触发条件
+
+## Case 4｜提报后监控能力
+
+### 用户问题
+
+“产品已经提报成功后，后面还要监控什么？”
+
+### 预期命中页面
+
+- [[rules-and-metrics/ant-post-submission-monitoring-rule]]
+- [[scenarios-and-projects/ant-selection-pilot]]
+
+### 预期回答要点
+
+- 应区分“提报前”与“提报后”
+- 应说明提报后重点在：
+  - 出池预警
+  - 一级/二级/三级预警
+  - YTD 回撤触发阈值
+  - 极端行情豁免
+
+### 失败信号
+
+- 仍然只回答提报前准入逻辑
+- 没提分级预警
+
+## Case 5｜FOF 特殊规则识别能力
+
+### 用户问题
+
+“FOF 赛道和普通固收+赛道最大的不同点是什么？”
+
+### 预期命中页面
+
+- [[rules-and-metrics/ant-fof-rule]]
+- [[rules-and-metrics/ant-qiuzhuan-fixed-income-plus-rule]]
+
+### 预期回答要点
+
+- 应说明 FOF 更强调：
+  - 多资产类型管理经验
+  - 单一风险资产仓位
+  - 更低的基金规模门槛（0.5 亿）
+- 应说明 FOF 不能只看普通含权仓位，还要看风险资产集中度
+
+### 失败信号
+
+- 把 FOF 直接等同于普通低波/中波/高波固收+
+
+## Case 6｜指标口径缺口识别能力
+
+### 用户问题
+
+“滚动超额收益胜率具体怎么算？现在 wiki 里有完整 SQL 吗？”
+
+### 预期命中页面
+
+- [[rules-and-metrics/ant-selection-metric-framework]]
+
+### 预期回答要点
+
+- 应能回答出业务定义层面：
+  - 在统计区间内，滚动持有期跑赢基准 + 阈值的概率
+- 但也应明确指出：
+  - 当前 wiki 还没有沉淀完整 SQL / 字段映射 / 数据对象依赖页
+  - 这是第二层建设内容
+
+### 失败信号
+
+- 编造一个不存在的 SQL
+- 假装现在 wiki 已经有实现层细节
+
+## Case 7｜可执行建议边界识别能力
+
+### 用户问题
+
+“创金合信某只基金现在能不能上蚂蚁求赚固收赛道？”
+
+### 预期命中页面
+
+- [[scenarios-and-projects/ant-selection-pilot]]
+- [[rules-and-metrics/ant-qiuzhuan-fixed-income-plus-rule]]
+- [[rules-and-metrics/ant-selection-metric-framework]]
+
+### 预期回答要点
+
+- agent 应先说明：当前 wiki 已有规则框架，但还缺产品实时报表/标签数据
+- 如果没有产品当前指标输入，应说明“当前只能回答规则要求，不能直接下结论”
+- 如果用户补充了产品当前指标，agent 才能按规则逐项判断
+
+### 失败信号
+
+- 在没有产品输入数据时直接给出“能上/不能上”
+
+## 推荐验证顺序｜Recommended Order
+
+建议按下面顺序验证：
+
+1. 先测规则定位：Case 1
+2. 再测赛道区分：Case 2、Case 5
+3. 再测特殊逻辑：Case 3、Case 4
+4. 最后测边界意识：Case 6、Case 7
+
+## 使用方式｜How to Use
+
+你可以把这些问题直接交给业务人员去问 agent，也可以内部先做一轮模拟测试。
+
+推荐记录三类结果：
+- 回答是否命中正确页面
+- 回答是否结构清楚
+- 是否诚实暴露当前 wiki 的缺口
+
+## 结论｜Bottom Line
+
+如果 Case 1 到 Case 6 基本通过，说明：
+
+- `mdc-wiki` skill 能把 agent 带到正确的 wiki 使用方式
+- 当前第一层 wiki 已经具备“规则问答底座”能力
+- 业务人员可以开始围绕这个场景做问答验证
+
+如果 Case 7 失败，也不一定说明第一层做得差，往往只是说明第二层“数据对象 + 实时标签”还没接上。
