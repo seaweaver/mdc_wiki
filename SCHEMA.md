@@ -16,6 +16,7 @@ can continue from without rediscovering everything from scratch.
 - File names: lowercase, hyphens, no spaces
 - Every wiki page starts with YAML frontmatter
 - Prefer English file paths with bilingual page titles
+- Prefer Chinese-first page content, with English used as anchor words or stable technical labels
 - Use `[[wikilinks]]` between related pages whenever possible
 - Keep pages scannable; split large pages instead of letting them grow without structure
 - When updating a page, always bump the `updated` date
@@ -29,6 +30,7 @@ can continue from without rediscovering everything from scratch.
 - `SCHEMA.md`: domain rules, taxonomy, and update policy
 - `index.md`: top-level navigation and page catalog
 - `log.md`: append-only activity log
+- `raw/internal-docs/`: copied internal source files such as Word, Excel, PPT, PDF
 - `data-objects/`: tables, views, fields, dictionaries, platforms, source systems
 - `rules-and-metrics/`: business rules, indicator definitions, terms, metrics, rule logic
 - `scenarios-and-projects/`: business scenarios, implementation themes, project pages
@@ -60,6 +62,7 @@ status: draft | active | archived
 Title convention:
 - Prefer `English Anchor｜中文标题`
 - Example: `Retail Income Attribution｜零售收入归属拆分`
+- In page body, prefer Chinese as the default narrative language
 
 Retrieval convention:
 - `aliases` should include common Chinese business expressions
@@ -161,3 +164,4 @@ When new information conflicts with existing content:
   prefer local cache plus incremental collection and treat `null` as a valid terminal state
 - Use agent-first organization: objects are first-class, scenarios are second, capabilities are explicit
 - Let scenario pages link to object pages and rule pages instead of duplicating raw definitions
+- Keep path names stable in English, but keep `index.md`, templates, summaries, and most prose primarily in Chinese

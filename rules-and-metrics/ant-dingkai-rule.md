@@ -15,7 +15,7 @@ status: active
 
 # Ant Dingkai Rule｜蚂蚁定开场景规则
 
-## Overview｜概览
+## 概览｜Overview
 
 定开场景是普通赛道规则的增强版。
 
@@ -25,14 +25,14 @@ status: active
 
 定开场景的核心不是完全重写规则，而是基于封闭期特征，对部分风控约束给出豁免和阈值放松。
 
-## Covered Types｜覆盖类型
+## 覆盖类型｜Covered Types
 
 - 短债定开
 - 中短债定开
 - 中长债定开
 - 低波固收+定开
 
-## Base Thresholds｜基础门槛
+## 基础门槛｜Base Thresholds
 
 - 成立时长：
   - 短债 / 中短债：`>=2年`
@@ -45,7 +45,7 @@ status: active
 同策略产品：
 - 表格当前文本中，中长债同策略条目仍写为“管理满2年”，建议后续复核与普通赛道是否一致
 
-## Structure Constraints｜结构约束
+## 结构约束｜Structure Constraints
 
 - 短债定开封闭期：`1个月`
 - 中短债定开封闭期：`2-4个月`
@@ -55,14 +55,14 @@ status: active
 额外仓位要求：
 - 低波固收+定开平均含权仓位：`(0,8%]`
 
-## Return Requirements｜收益要求
+## 收益要求｜Return Requirements
 
 - 短债定开：`>=天相短债基金指数`
 - 中短债定开：`>=天相中短债基金指数`
 - 中长债定开：`>=天相中长债基金指数`
 - 低波固收+定开：`>=95% cba00121 + 5% 000906.SH`
 
-## Holding Experience｜持有体验
+## 持有体验｜Holding Experience
 
 封闭期正胜率要求：
 - 短债 / 中短债：`>85%`
@@ -74,7 +74,7 @@ status: active
 - 中长债：任意持有 `6个月` 跑赢货币指数 `+120BP` 概率 `>70%` 或同类前 `50%`
 - 低波固收+：任意持有 `1年` 正收益概率 `100%`
 
-## Risk Control｜风险控制
+## 风险控制｜Risk Control
 
 在定开场景下，区间最大回撤阈值已放松为：
 - 短债定开：`<=0.63%`
@@ -82,16 +82,15 @@ status: active
 - 中长债定开：`<=1.875%`
 - 低波固收+定开：`<=2.5%`
 
-## Exemption Logic｜豁免逻辑
+## 豁免逻辑｜Exemption Logic
 
 满足封闭期正胜率条件时：
 - 原始回撤阈值放松 `25%`
 - 豁免滚动正胜率约束
 - 豁免最大日回撤约束
 
-## Related Pages｜关联页面
+## 关联页面｜Related Pages
 
 - [[rules-and-metrics/ant-qiuzhuan-pure-bond-rule]]
 - [[rules-and-metrics/ant-qiuzhuan-fixed-income-plus-rule]]
 - [[rules-and-metrics/ant-selection-metric-framework]]
-

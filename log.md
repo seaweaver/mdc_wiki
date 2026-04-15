@@ -25,3 +25,10 @@
 - Created lane rule pages for `求赚纯债`、`求赚固收`、`定开场景`、`超额宝`、`增益宝`、`FOF`
 - Created post-submission monitoring rule page covering warning ladders and drawdown exemptions
 - Updated `index.md` to register the first pilot knowledge pages
+
+## [2026-04-15] update | Raw archive and Chinese-first presentation
+
+- Copied Ant selection source files into `raw/internal-docs/ant-selection/`
+- Updated `SCHEMA.md` to require Chinese-first page content with English path stability
+- Rewrote `index.md` to use Chinese-first descriptions and entry labels
+- Updated page templates and data object writing guidance to prefer Chinese-first body content

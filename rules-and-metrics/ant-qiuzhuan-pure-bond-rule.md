@@ -15,7 +15,7 @@ status: active
 
 # Ant Qiuzhuan Pure Bond Rule｜蚂蚁求赚纯债赛道规则
 
-## Overview｜概览
+## 概览｜Overview
 
 求赚纯债赛道覆盖：
 - 短债
@@ -29,7 +29,7 @@ status: active
 - 最大回撤、连续回撤天数、最大日回撤
 - 持有期结构和久期区间
 
-## Base Thresholds｜基础门槛
+## 基础门槛｜Base Thresholds
 
 ### 短债 / 中短债
 
@@ -47,7 +47,7 @@ status: active
 - 管理当前产品：`>5个月`
 - 若提报产品成立不满 2 年：当前规则表写为同策略产品需管理满 3 年，后续建议复核是否应与“成立不满3年”联动
 
-## Performance Requirements｜收益要求
+## 收益要求｜Performance Requirements
 
 ### 基准达标
 
@@ -61,13 +61,13 @@ status: active
 - 中短债：任意持有 `3个月` 跑赢货币指数 `+80BP` 概率 `>70%`，或同类前 `50%`
 - 中长债：任意持有 `6个月` 跑赢货币指数 `+120BP` 概率 `>70%`，或同类前 `50%`
 
-## Holding Experience｜持有体验
+## 持有体验｜Holding Experience
 
 - 短债：持有 `1个月` 正胜率 `>=80%`，或同类前 `50%`
 - 中短债：持有 `3个月` 正胜率 `>=90%`，或同类前 `50%`
 - 中长债：持有 `12个月` 正胜率 `=100%`，或同类前 `50%`
 
-## Risk Control｜风险控制
+## 风险控制｜Risk Control
 
 - 短债最大回撤：`<=0.5%`
 - 中短债最大回撤：`<=1.0%`
@@ -79,7 +79,7 @@ status: active
 - 中短债最大单日跌幅：`<0.20%`
 - 中长债最大单日跌幅：`<0.50%`
 
-## Structure Constraints｜结构约束
+## 结构约束｜Structure Constraints
 
 - 短债持有期：全开 / `1个月`
 - 中短债持有期：全开 / `2-4个月`
@@ -90,7 +90,7 @@ status: active
 - 中短债：`0.8年 < 久期 <= 1.5年`
 - 中长债：`1.5年 < 久期 <= 3年`
 
-## Dingkai Exemption｜定开豁免
+## 定开豁免｜Dingkai Exemption
 
 满足封闭期条件时可获得额外豁免：
 
@@ -105,9 +105,8 @@ status: active
 - 豁免正胜率约束
 - 豁免最大日回撤约束
 
-## Related Pages｜关联页面
+## 关联页面｜Related Pages
 
 - [[rules-and-metrics/ant-selection-metric-framework]]
 - [[rules-and-metrics/ant-dingkai-rule]]
 - [[rules-and-metrics/ant-post-submission-monitoring-rule]]
-

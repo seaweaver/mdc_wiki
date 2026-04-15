@@ -15,7 +15,7 @@ status: active
 
 # Ant Qiuzhuan Fixed Income Plus Rule｜蚂蚁求赚固收赛道规则
 
-## Overview｜概览
+## 概览｜Overview
 
 求赚固收赛道覆盖：
 - 极低波固收+
@@ -25,7 +25,7 @@ status: active
 
 核心约束除了收益与回撤，还显著依赖含权仓位、季报仓位和持有期结构。
 
-## Base Thresholds｜基础门槛
+## 基础门槛｜Base Thresholds
 
 - 极低波成立时长：`>=2年/5个月`
 - 低波 / 中波 / 高波成立时长：`>=3年/5个月`
@@ -37,7 +37,7 @@ status: active
 - 极低波：若提报产品成立不满 2 年，同策略产品需管理满 2 年
 - 低波及以上：若提报产品成立不满 3 年，同策略产品需管理满 3 年
 
-## Return Requirements｜收益要求
+## 收益要求｜Return Requirements
 
 ### 绝对/相对收益
 
@@ -58,7 +58,7 @@ status: active
 - 其他波段通常看近 `x年 / 成立以来`
 - 成立不满要求年限时，使用成立以来
 
-## Holding Experience｜持有体验
+## 持有体验｜Holding Experience
 
 - 极低波：
   - `3M-5M` 产品：近 `2年` 滚持 `3个月` 正收益概率 `85%`
@@ -67,7 +67,7 @@ status: active
 - 中波：任意持有 `1年` 正收益概率 `>=80%`
 - 高波：当前表中未显式给出持有体验阈值
 
-## Risk Control｜风险控制
+## 风险控制｜Risk Control
 
 - 极低波：
   - `3M-5M` 产品最大回撤 `<=1%`
@@ -76,7 +76,7 @@ status: active
 - 中波：`<=3%`
 - 高波：`<=5%`
 
-## Position and Structure｜仓位与结构
+## 仓位与结构｜Position and Structure
 
 ### 平均含权仓位
 
@@ -104,7 +104,7 @@ status: active
 - 极低波：`3个月及以上`
 - 低波 / 中波 / 高波：全开 / `6个月及以上`
 
-## Dingkai Exemption｜定开豁免
+## 定开豁免｜Dingkai Exemption
 
 当前规则表只对极低波固收+给出了定开豁免：
 
@@ -113,9 +113,8 @@ status: active
 - 豁免正胜率约束
 - 豁免最大日回撤约束
 
-## Related Pages｜关联页面
+## 关联页面｜Related Pages
 
 - [[rules-and-metrics/ant-selection-metric-framework]]
 - [[rules-and-metrics/ant-dingkai-rule]]
 - [[rules-and-metrics/ant-post-submission-monitoring-rule]]
-

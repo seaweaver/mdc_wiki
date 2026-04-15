@@ -16,13 +16,13 @@ status: active
 
 # Ant Selection Pilot｜蚂蚁选品试点场景
 
-## Overview｜概览
+## 概览｜Overview
 
 本场景用于把蚂蚁渠道基金产品提报监控材料，沉淀为可被 agent 检索、解释、串联和后续执行的知识页体系。
 
 当前目标不是直接构建自动打标程序，而是先把规则、指标、赛道和提报后监控逻辑整理为结构化知识底座。
 
-## Trigger and Goal｜触发条件与目标
+## 触发条件与目标｜Trigger and Goal
 
 触发条件：
 - 蚂蚁渠道更新赛道准入要求
@@ -35,7 +35,7 @@ status: active
 - 提报前预警与提报后预警逻辑
 - 后续可演进的打标逻辑、规则配置和业务问答基础
 
-## End-to-End Flow｜端到端流程
+## 端到端流程｜End-to-End Flow
 
 1. 读取原始业务规则文档和配套规则表
 2. 将规则按赛道和阶段拆分
@@ -43,7 +43,7 @@ status: active
 4. 形成“提报前判断”和“提报后监控”两套规则视图
 5. 为后续产品标签、Skill、MCP、规则引擎留出接口
 
-## Current Source Package｜当前来源材料
+## 当前来源材料｜Current Source Package
 
 - 主文档：蚂蚁渠道基金产品提报监控 `.docx`
 - 配套表格：
@@ -59,22 +59,22 @@ status: active
   - 工作表10：不同赛道对应的回撤豁免条件
   - 工作表11：分级触发阈值与对应动作
 
-## Stage Design｜阶段设计
+## 阶段设计｜Stage Design
 
-### Stage A｜准入前
+### 准入前｜Stage A
 
 包含两类预警：
 - 培育产品预警：业务先配置培养产品清单，系统监控“即将满足”赛道准入条件的产品
 - 提报产品预警：对创金产品池进行监控，当符合或接近符合某赛道准入条件时进行提示
 
-### Stage B｜准入后
+### 准入后｜Stage B
 
 入池产品需要持续监控：
 - 是否触发出池风险
 - 是否进入一级、二级、三级预警
 - 是否满足极端行情豁免条件
 
-## Required Rules｜依赖规则页
+## 依赖规则页｜Required Rules
 
 - [[rules-and-metrics/ant-selection-metric-framework]]
 - [[rules-and-metrics/ant-qiuzhuan-pure-bond-rule]]
@@ -85,7 +85,7 @@ status: active
 - [[rules-and-metrics/ant-fof-rule]]
 - [[rules-and-metrics/ant-post-submission-monitoring-rule]]
 
-## Future Capabilities｜后续能力形态
+## 后续能力形态｜Future Capabilities
 
 后续可演进的能力包括：
 - 产品可提报标签
@@ -95,7 +95,7 @@ status: active
 - 极端行情豁免解释
 - 面向业务同事的问答输出
 
-## Current Gaps｜当前缺口
+## 当前缺口｜Current Gaps
 
 目前已经具备规则框架，但仍有待补齐：
 - 具体数据来源与字段映射
@@ -104,10 +104,9 @@ status: active
 - 历史提报成功/失败经验
 - 原始材料入 `raw/` 的归档版本
 
-## Follow-up Assets｜后续沉淀资产
+## 后续沉淀资产｜Follow-up Assets
 
 - 可提报标签对象页
 - 赛道适配规则配置页
 - 指标实现说明页
 - 提报案例和出池案例页
-

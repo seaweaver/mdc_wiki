@@ -15,7 +15,7 @@ status: active
 
 # Ant Chaoebao Rule｜蚂蚁超额宝规则
 
-## Overview｜概览
+## 概览｜Overview
 
 超额宝定位为理财替代，强调绝对收益、控制回撤和稳定持有体验。
 
@@ -25,7 +25,7 @@ status: active
 - 年年-纯债
 - 年年-极低波
 
-## Base Thresholds｜基础门槛
+## 基础门槛｜Base Thresholds
 
 - 成立时长：`>=2年/5个月`
 - 基金规模：`>=2亿元`
@@ -35,7 +35,7 @@ status: active
 - 月月：公募经验 `>2年`，管理当前产品 `>1年`
 - 季季 / 年年：公募经验 `>3年`，管理当前产品 `>2年`
 
-## Return Requirements｜收益要求
+## 收益要求｜Return Requirements
 
 ### 绝对收益
 
@@ -51,14 +51,14 @@ status: active
 - 年年-纯债：持有 `1年` 战胜货基 `+80BP` 的概率 `>80%`
 - 年年-极低波：持有 `1年` 战胜货基 `+80BP` 的概率 `>80%`
 
-## Holding Experience｜持有体验
+## 持有体验｜Holding Experience
 
 - 月月：持有期正收益概率 `>=95%`
 - 季季：持有期正收益概率 `=100%`
 - 年年-纯债：持有期正收益概率 `=100%`
 - 年年-极低波：滚持 `180天` 正收益概率 `100%`
 
-## Risk Control｜风险控制
+## 风险控制｜Risk Control
 
 - 月月最大回撤：`<=0.3%`
 - 季季最大回撤：`<=1%`
@@ -69,7 +69,7 @@ status: active
 - 季季：近 `2年` 最大日回撤 `<=0.20%`
 - 年年-纯债：近 `2年` 最大日回撤 `<=0.50%`
 
-## Structure Constraints｜结构约束
+## 结构约束｜Structure Constraints
 
 持有期：
 - 月月：`1个月`
@@ -82,8 +82,7 @@ status: active
 - 年年-纯债：`1.5年 < 久期 <= 3年`
 - 年年-极低波：`久期 <= 3年` 且含权仓位 `(0,5%]`
 
-## Related Pages｜关联页面
+## 关联页面｜Related Pages
 
 - [[rules-and-metrics/ant-selection-metric-framework]]
 - [[rules-and-metrics/ant-post-submission-monitoring-rule]]
-

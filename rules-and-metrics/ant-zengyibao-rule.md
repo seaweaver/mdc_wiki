@@ -14,7 +14,7 @@ status: active
 
 # Ant Zengyibao Rule｜蚂蚁增益宝规则
 
-## Overview｜概览
+## 概览｜Overview
 
 增益宝定位为稳健增值，在控制年度回撤的前提下追求超越货币基金的收益。
 
@@ -23,7 +23,7 @@ status: active
 - 中波固收+
 - 高波固收+
 
-## Base Thresholds｜基础门槛
+## 基础门槛｜Base Thresholds
 
 - 成立时长：`>=3年/5个月`
 - 基金规模：`>=2亿元`
@@ -31,7 +31,7 @@ status: active
 - 管理当前产品时长：`>2年`
 - 同策略产品：基金经理需管理满 `3年`，且提报产品管理满 `5个月`
 
-## Return Requirements｜收益要求
+## 收益要求｜Return Requirements
 
 近 `1年` 收益要求：
 - 低波：`>货币基金 + 2%`
@@ -43,20 +43,20 @@ status: active
 - 中波：战胜货基 `+200BP` 的概率 `>=60%`
 - 高波：战胜货基 `+250BP` 的概率 `>=50%`
 
-## Holding Experience｜持有体验
+## 持有体验｜Holding Experience
 
 - 低波：持有 `1年` 正收益概率 `=100%`
 - 中波：持有 `1年` 正收益概率 `>=95%`
 - 高波：持有 `1年` 正收益概率 `>=85%`
 
-## Risk Control｜风险控制
+## 风险控制｜Risk Control
 
 年度最大回撤：
 - 低波：每年 `<=2%`
 - 中波：每年 `<=3%`
 - 高波：每年 `<=5%`
 
-## Position and Structure｜仓位与结构
+## 仓位与结构｜Position and Structure
 
 持有期要求：
 - 低波：`3个月及以上`
@@ -72,8 +72,7 @@ status: active
 - 中波：`<=20%`
 - 高波：`<=30%`
 
-## Related Pages｜关联页面
+## 关联页面｜Related Pages
 
 - [[rules-and-metrics/ant-selection-metric-framework]]
 - [[rules-and-metrics/ant-post-submission-monitoring-rule]]
-

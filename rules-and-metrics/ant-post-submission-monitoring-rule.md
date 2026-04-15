@@ -15,7 +15,7 @@ status: active
 
 # Ant Post Submission Monitoring Rule｜蚂蚁提报后监控规则
 
-## Overview｜概览
+## 概览｜Overview
 
 蚂蚁选品试点并不止于“能否提报”，还包括产品入池后的持续监控。
 
@@ -24,7 +24,7 @@ status: active
 - 预警处于哪个阶梯
 - 是否满足极端行情豁免
 
-## Stage Logic｜阶段逻辑
+## 阶段逻辑｜Stage Logic
 
 工作表1定义了三类流程：
 - 准入前：培育产品预警
@@ -33,7 +33,7 @@ status: active
 
 本页聚焦第三类，即入池产品的持续监控。
 
-## Performance Targets｜业绩考核目标
+## 业绩考核目标｜Performance Targets
 
 ### 求赚系列
 
@@ -55,7 +55,7 @@ status: active
 - 中波固收+：最大回撤 `<3%`
 - 高波固收+：最大回撤 `<5%`
 
-## Drawdown Exemption｜回撤豁免条件
+## 回撤豁免条件｜Drawdown Exemption
 
 不同赛道对应的回撤豁免条件如下：
 
@@ -72,7 +72,7 @@ status: active
 - 中证纯债基金指数在同一区间回撤天数 `>=5天`
 - 天相短债 / 中短债 / 中长债基金指数最大日回撤超过阈值
 
-## Warning Ladder｜分级触发阈值
+## 分级触发阈值｜Warning Ladder
 
 ### 第一阶梯
 
@@ -98,7 +98,7 @@ status: active
 - 极端行情补充：若基准指数年度最大回撤突破阈值，则按最大回撤排名后 `70%`
 - 输出：三级预警
 
-## Monitoring Output｜预期输出
+## 预期输出｜Monitoring Output
 
 提报后监控结果理想上应包括：
 - 当前所在赛道
@@ -107,8 +107,7 @@ status: active
 - 是否满足极端行情豁免
 - 建议动作
 
-## Related Pages｜关联页面
+## 关联页面｜Related Pages
 
 - [[scenarios-and-projects/ant-selection-pilot]]
 - [[rules-and-metrics/ant-selection-metric-framework]]
-

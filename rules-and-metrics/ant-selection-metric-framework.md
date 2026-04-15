@@ -15,7 +15,7 @@ status: active
 
 # Ant Selection Metric Framework｜蚂蚁选品指标框架
 
-## Overview｜概览
+## 概览｜Overview
 
 蚂蚁选品规则目前可以归纳为六类指标层次：
 - 基础门槛
@@ -27,7 +27,7 @@ status: active
 
 这套页面用于提供赛道之间共享的指标语言和口径目录。
 
-## Core Dimensions｜一级维度
+## 一级维度｜Core Dimensions
 
 ### 1. 基础门槛
 
@@ -95,7 +95,7 @@ status: active
 - 封闭期类型
 - 单一风险资产仓位（FOF）
 
-## Metric Notes｜指标说明
+## 指标说明｜Metric Notes
 
 ### 成立时长
 
@@ -177,7 +177,7 @@ status: active
 - 中短债：`(0.8, 1.5]`
 - 中长债：`(1.5, 3]`
 
-## Shared Gotchas｜共性易错点
+## 共性易错点｜Shared Gotchas
 
 - 很多指标写了“近 X 年 / 成立以来”，成立不满年限时要切换到成立以来
 - “取内部口径”类指标意味着规则页不能替代数据对象页
@@ -185,7 +185,7 @@ status: active
 - 部分赛道区分“全开 / 定开 / 持有期产品”，持有期结构是硬门槛，不只是备注
 - 可转债在含权仓位中的折算系数当前为 `0.5`
 
-## Related Rule Pages｜关联规则页
+## 关联规则页｜Related Rule Pages
 
 - [[rules-and-metrics/ant-qiuzhuan-pure-bond-rule]]
 - [[rules-and-metrics/ant-qiuzhuan-fixed-income-plus-rule]]
@@ -194,4 +194,3 @@ status: active
 - [[rules-and-metrics/ant-zengyibao-rule]]
 - [[rules-and-metrics/ant-fof-rule]]
 - [[rules-and-metrics/ant-post-submission-monitoring-rule]]
-

@@ -2,23 +2,27 @@
 
 ## Purpose｜用途
 
-This page defines canonical templates for the most important wiki page types.
-Use these templates to keep the wiki consistent, searchable, and reusable by agents.
+本页定义最重要的几类 wiki 页面模板。
+这些模板的目标不是追求英文技术文档风格，而是让页面同时满足：
+- 中文业务语义容易命中
+- 英文路径和锚点稳定可复用
+- agent 容易拆解、链接和组合
 
-General rules:
-- file path in English
-- page title in bilingual form
-- Chinese aliases and keywords for retrieval
-- concise summary first, details later
-- prefer links to object pages and rule pages instead of duplicating content
+通用规则：
+- 文件路径用英文
+- 页面标题用中英混合
+- 页面正文默认中文为主
+- `aliases` 和 `keywords` 要优先覆盖中文问法
+- 先写概览，再写细节
+- 优先链接到对象页和规则页，而不是在场景页里重复解释一切
 
 ## Template A｜Rule / Metric Page
 
-Use for:
-- business rules
-- metric definitions
-- terminology with executable implications
-- rule priority systems
+适用场景：
+- 业务规则
+- 指标口径
+- 带可执行含义的术语
+- 规则优先级体系
 
 ```markdown
 ---
@@ -73,13 +77,13 @@ status: draft
 
 ## Template B｜Data Object Page
 
-Use for:
-- tables
-- views
-- source systems
-- mapping tables
-- dictionaries
-- tag objects
+适用场景：
+- 表
+- 视图
+- 数据源
+- 映射表
+- 字典
+- 标签对象
 
 ```markdown
 ---
@@ -136,11 +140,11 @@ status: draft
 
 ## Template C｜Scenario / Project Page
 
-Use for:
-- business scenarios
-- implementation themes
-- end-to-end project pages
-- closed-loop workflows
+适用场景：
+- 业务场景
+- 建设主题
+- 端到端项目页
+- 闭环流程页
 
 ```markdown
 ---
@@ -203,7 +207,7 @@ status: draft
 
 ## Bottom Line｜结论
 
-If a page does not fit one template perfectly, choose the closest one and keep:
-- bilingual title
-- Chinese retrieval aliases
-- explicit links to related objects, rules, and scenarios
+如果某个页面不能完全套用某一个模板，至少保留这三点：
+- 标题中英混合
+- 中文检索别名完整
+- 明确链接到相关对象页、规则页和场景页

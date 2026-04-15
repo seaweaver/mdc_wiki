@@ -14,7 +14,7 @@ status: active
 
 # Ant FOF Rule｜蚂蚁FOF赛道规则
 
-## Overview｜概览
+## 概览｜Overview
 
 FOF 赛道本质上沿用固收+的波动分层思想，但更强调多资产管理经验和单一风险资产约束。
 
@@ -24,7 +24,7 @@ FOF 赛道本质上沿用固收+的波动分层思想，但更强调多资产管
 - 中波固收+
 - 高波固收+
 
-## Base Thresholds｜基础门槛
+## 基础门槛｜Base Thresholds
 
 - 成立时长：`>=3年/5个月`
 - 基金规模要求：各波段均 `>=0.5亿元`
@@ -34,7 +34,7 @@ FOF 赛道本质上沿用固收+的波动分层思想，但更强调多资产管
   - 经验范围含 `公募 / 专户 / 投顾`
   - 管理提报产品满 `5个月`
 
-## Structure Constraints｜结构约束
+## 结构约束｜Structure Constraints
 
 ### 平均含权仓位
 
@@ -62,12 +62,11 @@ FOF 赛道本质上沿用固收+的波动分层思想，但更强调多资产管
 - 风险资产仓位包含 A股、港股、海外股、商品、可转债
 - 可转债系数与普通固收+保持一致
 
-## Notes｜说明
+## 说明｜Notes
 
 当前 FOF 赛道表主要提供结构约束，收益和风控基准更多在“数据指标总表”和“提报后监控表”中补充。
 
-## Related Pages｜关联页面
+## 关联页面｜Related Pages
 
 - [[rules-and-metrics/ant-selection-metric-framework]]
 - [[rules-and-metrics/ant-post-submission-monitoring-rule]]
-
