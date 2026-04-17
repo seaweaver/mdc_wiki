@@ -94,3 +94,9 @@
 - Updated `SCHEMA.md` to require concept pages to be independently explainable, family-oriented, and resistant to over-atomization
 - Added merged concept pages: `concepts/基金经理资质要求.md`, `concepts/产品运作期限结构.md`, `concepts/仓位与暴露约束.md`
 - Archived overly granular concept pages into `_archive/concepts/` and rewired active links, `index.md`, and related pages to the merged family pages
+
+## [2026-04-17] create | 收紧标准后的概念与对象补充
+
+- Added concept pages: `concepts/相对收益超额门槛.md`, `concepts/波动分层体系.md`, `concepts/预警分级机制.md`
+- Added entity page: `entities/蚂蚁选品赛道体系.md`
+- Updated `index.md`, the Ant scenario page, the metric framework page, and related rule pages to link the new family concepts and lane-system entity
