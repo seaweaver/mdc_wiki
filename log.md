@@ -100,3 +100,9 @@
 - Added concept pages: `concepts/相对收益超额门槛.md`, `concepts/波动分层体系.md`, `concepts/预警分级机制.md`
 - Added entity page: `entities/蚂蚁选品赛道体系.md`
 - Updated `index.md`, the Ant scenario page, the metric framework page, and related rule pages to link the new family concepts and lane-system entity
+
+## [2026-04-17] update | 高价值对象补充与规则页去重精修
+
+- Added entity pages: `entities/纯债期限层级.md`, `entities/超额宝层级体系.md`
+- Refined rule pages to move repeated object semantics out of `rules/` and into stable entity/concept pages while keeping thresholds in place
+- Updated index, scenario page, related concept pages, and lane-system entity to link the new stable business objects
