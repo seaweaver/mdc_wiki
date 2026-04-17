@@ -4,7 +4,7 @@ aliases:
   - FOF赛道规则
   - 蚂蚁FOF规则
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-17
 type: rule
 tags: [rule, fund, fof, strategy, retail]
 keywords: [FOF赛道, FOF含权仓位, 单一风险资产, 多资产类型产品]
@@ -68,5 +68,9 @@ FOF 赛道本质上沿用固收+的波动分层思想，但更强调多资产管
 
 ## 关联页面｜Related Pages
 
-- [[rules-and-metrics/ant-selection-metric-framework]]
-- [[rules-and-metrics/ant-post-submission-monitoring-rule]]
+- [[rules/蚂蚁选品指标框架]]
+- [[rules/蚂蚁提报后监控规则]]
+- [[concepts/成立时长]]
+- [[concepts/基金合计规模]]
+- [[concepts/基金经理资质要求]]
+- [[concepts/仓位与暴露约束]]

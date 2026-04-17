@@ -12,10 +12,12 @@
 
 ### 写作与组织规则
 
-- 路径保持英文稳定，标题使用中英混合，正文内容中文主导
+- 整体以中文为主、英文为辅；正文、摘要、标签、索引说明优先中文
+- 新增页面文件名优先使用中文；英文只作为标题锚点、技术缩写或兼容检索
 - `index.md`、模板页、说明页优先使用中文描述，英文只作为稳定锚点或技术标签
-- 优先按 `data-objects/`、`rules-and-metrics/`、`scenarios-and-projects/`、`capabilities/`、`standards/` 组织知识
+- 优先按 `tables/`、`rules/`、`scenarios/`、`capabilities/`、`standards/` 组织知识
 - 场景页负责串联，对象页和规则页负责沉淀，避免在场景页重复定义底层规则
+- 对同一个场景，若某个概念或实体在两个及以上页面重复出现，应及时抽出到 `concepts/` 或 `entities/`
 
 ### 实施边界
 

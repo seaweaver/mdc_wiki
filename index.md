@@ -1,21 +1,21 @@
 # Wiki Index
 
 > 面向 agent 的零售业务与数据协同知识目录。
-> Last updated: 2026-04-15 | Total pages: 10
+> Last updated: 2026-04-17 | Total pages: 39
 
-## Data Objects｜数据对象
+## Tables｜表与数据对象
 
 用途：
 存放 agent 可以直接识别和引用的稳定对象资产。
 
 包括：
-- tables, views, fields, source systems, platforms
-- dictionaries, enum sets, mapping tables, tag objects
+- 表、视图、字段、数据源、平台
+- 字典、枚举集、映射表、标签对象
 
 入口页面：
-- [[data-objects/README]] - 数据对象目录说明
+- [[tables/数据对象目录说明]] - 数据对象目录说明
 
-## Rules and Metrics｜业务规则与指标
+## Rules｜业务规则与指标
 
 用途：
 存放业务规则、指标口径、术语定义、计算逻辑和版本化规则语义。
@@ -28,16 +28,16 @@
 - 优先级与例外逻辑
 
 入口页面：
-- [[rules-and-metrics/ant-selection-metric-framework]] - 蚂蚁选品指标框架
-- [[rules-and-metrics/ant-qiuzhuan-pure-bond-rule]] - 蚂蚁求赚纯债赛道规则
-- [[rules-and-metrics/ant-qiuzhuan-fixed-income-plus-rule]] - 蚂蚁求赚固收赛道规则
-- [[rules-and-metrics/ant-dingkai-rule]] - 蚂蚁定开场景规则
-- [[rules-and-metrics/ant-chaoebao-rule]] - 蚂蚁超额宝规则
-- [[rules-and-metrics/ant-zengyibao-rule]] - 蚂蚁增益宝规则
-- [[rules-and-metrics/ant-fof-rule]] - 蚂蚁 FOF 赛道规则
-- [[rules-and-metrics/ant-post-submission-monitoring-rule]] - 蚂蚁提报后监控规则
+- [[rules/蚂蚁选品指标框架]] - 蚂蚁选品指标框架
+- [[rules/蚂蚁求赚纯债赛道规则]] - 蚂蚁求赚纯债赛道规则
+- [[rules/蚂蚁求赚固收赛道规则]] - 蚂蚁求赚固收赛道规则
+- [[rules/蚂蚁定开场景规则]] - 蚂蚁定开场景规则
+- [[rules/蚂蚁超额宝规则]] - 蚂蚁超额宝规则
+- [[rules/蚂蚁增益宝规则]] - 蚂蚁增益宝规则
+- [[rules/蚂蚁FOF赛道规则]] - 蚂蚁 FOF 赛道规则
+- [[rules/蚂蚁提报后监控规则]] - 蚂蚁提报后监控规则
 
-## Scenarios and Projects｜业务场景与项目
+## Scenarios｜业务场景与项目
 
 用途：
 存放端到端业务场景、建设主题和项目页，用来串联对象、规则和能力资产。
@@ -49,8 +49,8 @@
 - AI 问答场景
 
 入口页面：
-- [[scenarios-and-projects/ant-selection-pilot]] - 蚂蚁选品试点场景
-- [[scenarios-and-projects/ant-selection-verification-cases]] - 蚂蚁选品验证案例
+- [[scenarios/蚂蚁选品试点场景]] - 蚂蚁选品试点场景
+- [[scenarios/蚂蚁选品验证案例]] - 蚂蚁选品验证案例
 
 ## Capabilities｜能力资产
 
@@ -61,9 +61,9 @@
 - MCP
 - Skill
 - CLI
-- rule engines
-- tag engines
-- templates and helper assets
+- 规则引擎
+- 标签引擎
+- 模板与辅助资产
 
 ## Standards｜规范与约定
 
@@ -71,13 +71,46 @@
 存放写作规范、页面模板、命名约定和维护流程规则。
 
 入口页面：
-- [[standards/page-templates]] - 页面模板与写作规范
+- [[standards/页面模板]] - 页面模板与写作规范
 
 ## Atomic Knowledge Types｜原子知识类型
 
 这些目录继续保留，用于更细颗粒度的知识沉淀：
 
-- `entities/` for entity pages
-- `concepts/` for abstract concepts
-- `comparisons/` for side-by-side trade-offs
-- `queries/` for high-value filed answers
+- `entities/`：实体页
+- `concepts/`：概念页
+- `comparisons/`：对比分析页
+- `queries/`：高价值问答页
+
+### Entities｜实体页
+
+- [[entities/蚂蚁渠道]] - 蚂蚁选品场景中的核心渠道对象
+- [[entities/天相债基指数体系]] - 蚂蚁纯债与定开场景共用的债基基准体系
+- [[entities/货币基金基准]] - 多个赛道共同使用的相对收益比较基准
+- [[entities/固收+组合基准]] - 固收+和定开规则中反复出现的 cba00121 与 000906.SH 组合基准
+- [[entities/中证纯债基金指数]] - 提报后极端行情豁免中使用的纯债基准对象
+
+### Concepts｜概念页
+
+- [[concepts/滚动超额收益胜率]] - 判断滚动持有窗口内是否持续跑赢基准加阈值
+- [[concepts/持有期正胜率]] - 判断用户在给定持有期下获得正收益的概率
+- [[concepts/区间最大回撤]] - 评估统计区间内从高点回撤到低点的最大跌幅
+- [[concepts/最大日回撤]] - 评估单日净值相对前一日的最大跌幅
+- [[concepts/定开豁免机制]] - 定开产品在满足封闭期条件后获得的风险约束放松机制
+- [[concepts/封闭期正胜率]] - 定开产品在封闭期维度上的正收益概率要求
+- [[concepts/同类前50%替代条件]] - 在主阈值未直接满足时可触发的排名替代判断
+- [[concepts/极端行情豁免]] - 提报后监控中因基准异常波动触发的特殊豁免逻辑
+- [[concepts/YTD回撤]] - 提报后分级预警中使用的年初至今回撤指标
+- [[concepts/久期范围]] - 用于区分纯债与超额宝产品风格区间的期限约束
+- [[concepts/基金合计规模]] - 跨份额汇总后的基金规模口径及内部使用约束
+- [[concepts/同策略产品佐证]] - 产品成立不足年限时用于补足历史表现的替代性证明条件
+- [[concepts/连续回撤天数]] - 用于识别回撤持续性而非单次跌幅的风险指标
+- [[concepts/成立时长]] - 用于衡量产品是否具备足够历史观察窗口的基础门槛
+- [[concepts/区间年化收益率]] - 用于把不同观察窗口内的收益统一折算到年化口径
+- [[concepts/业绩基准达标]] - 用于判断产品在指定观察区间内是否达到对应基准要求
+- [[concepts/成立以来替代规则]] - 用于在产品成立不足标准窗口时切换到成立以来口径
+- [[concepts/月度季度年度正收益概率]] - 用于按自然月、季度、年度切片衡量产品收益稳定性
+- [[concepts/近1年收益]] - 用于直接衡量产品过去一年的累计收益表现
+- [[concepts/基金经理资质要求]] - 用于统一解释投资年限、公募经验、当前产品管理时长和多资产经验等经理门槛
+- [[concepts/产品运作期限结构]] - 用于统一解释最短持有期、封闭期和开放结构等期限约束
+- [[concepts/仓位与暴露约束]] - 用于统一解释平均含权、季报上限、滚动仓位和单一风险资产暴露
