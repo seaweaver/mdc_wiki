@@ -4,9 +4,9 @@ aliases:
   - FOF赛道规则
   - 蚂蚁FOF规则
 created: 2026-04-15
-updated: 2026-04-17
+updated: 2026-04-24
 type: rule
-tags: [rule, fund, fof, strategy, retail]
+tags: [知识类型/规则, 业务域/渠道, 业务域/产品, 资产类型/基金, 资产类型/策略, 治理状态/生效]
 keywords: [FOF赛道, FOF含权仓位, 单一风险资产, 多资产类型产品]
 sources: []
 status: active

@@ -106,3 +106,38 @@
 - Added entity pages: `entities/纯债期限层级.md`, `entities/超额宝层级体系.md`
 - Refined rule pages to move repeated object semantics out of `rules/` and into stable entity/concept pages while keeping thresholds in place
 - Updated index, scenario page, related concept pages, and lane-system entity to link the new stable business objects
+
+## [2026-04-23] update | 抽象化知识快照工件原则
+
+- Updated `SCHEMA.md` to add abstract rules for self-contained knowledge snapshot artifacts, traceability, version semantics, and incremental ingestion
+- Kept the schema tool-agnostic by avoiding any binding to specific upstream skills, project templates, or export field details
+
+## [2026-04-24] ingest | data_project 知识快照
+
+- Exported canonical context snapshot with `context-snapshot`: `D:\Dropbox\Project\data_project\context\exports\data_project-知识快照-2026-04-24-bc37852.md`
+- Archived immutable raw copy: `raw/knowledge-snapshots/data-project/data_project-知识快照-2026-04-24-bc37852.md`
+- Promoted `36` data-object pages, `21` rule pages, `1` dictionary concept page, `1` global standard page, `1` scenario entry page, and `1` import report page
+- Snapshot metadata: `snapshot_id=data-project:2026-04-24:bc37852`, `source_commit=bc37852`, `source_content_hash=8db680bd642d5917`
+- Diff baseline: `data_project-知识快照-2026-04-23-ca1431d.md`; this wiki import treated the snapshot as the first structured absorption of `data_project`
+
+## [2026-04-24] update | 中文主标签体系
+
+- Updated `SCHEMA.md` to replace the English fixed tag whitelist with a Chinese-first, namespace-based seed taxonomy
+- Added seed dimensions for knowledge type, business domain, business action, asset type, data technology, and governance status
+- Clarified that project names, table names, field names, rule IDs, English terms, and aliases should go to `keywords` or `aliases` instead of `tags`
+- Did not batch-retag existing pages in this step; historical page tags should be migrated separately if needed
+
+## [2026-04-24] update | 存量页面标签迁移
+
+- Migrated active wiki page frontmatter tags to the Chinese-first namespace taxonomy in `SCHEMA.md`
+- Updated `106` active pages across `tables/`, `rules/`, `scenarios/`, `standards/`, `entities/`, `concepts/`, and `queries/`
+- Added missing frontmatter to `tables/数据对象目录说明.md` and `standards/页面模板.md`
+- Updated page-template examples to use Chinese namespace tags
+- Left `raw/` and `_archive/` untouched
+
+## [2026-04-24] create | 知识沉淀工作流说明
+
+- Created `standards/知识沉淀工作流.md` to document the local project knowledge -> context snapshot -> domain wiki ingest workflow
+- Clarified the boundary between local project knowledge bases, self-contained knowledge snapshots, and the business-domain wiki
+- Documented the roles of `context-snapshot` and `mdc-wiki`, including export, raw archive, page promotion, review, and incremental evolution
+- Updated `index.md` to register the new standard page

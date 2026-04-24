@@ -4,9 +4,9 @@ aliases:
   - 年初至今回撤
   - 年度回撤
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-24
 type: concept
-tags: [metric, monitoring, risk, fund, retail]
+tags: [知识类型/概念, 知识类型/指标, 业务域/风控, 业务动作/监控, 资产类型/基金, 治理状态/生效]
 keywords: [YTD回撤, 年初至今回撤, 年度回撤, year to date drawdown]
 sources:
   - raw/internal-docs/ant-selection/蚂蚁渠道基金产品提报监控-工作表11分级触发阈值与对应动作.xlsx

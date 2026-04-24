@@ -1,0 +1,244 @@
+---
+title: "data_project知识快照导入"
+aliases: ["data_project导入入口", "data_project知识快照", "营销域数据项目知识导入"]
+created: 2026-04-24
+updated: 2026-04-24
+type: project
+tags: [知识类型/项目, 业务动作/过滤, 数据技术/血缘, 治理状态/内部, 治理状态/生效]
+keywords: ["data_project", "知识快照", "导入", "营销域", "context snapshot"]
+sources: ["raw/knowledge-snapshots/data-project/data_project-知识快照-2026-04-24-bc37852.md"]
+status: active
+---
+# data_project知识快照导入
+
+## 概览
+
+- 来源项目：`data_project`
+- 快照 ID：`data-project:2026-04-24:bc37852`
+- 快照时间：`2026-04-24`
+- 导出时间：`2026-04-24T11:04:11`
+- 源仓库提交：`bc37852`
+- 源内容哈希：`8db680bd642d5917`
+- 上一快照：`data_project-知识快照-2026-04-23-ca1431d.md`
+- 原始归档：`raw/knowledge-snapshots/data-project/data_project-知识快照-2026-04-24-bc37852.md`
+- 导入对象：`36` 个数据对象、`21` 条规则、`17` 个字典条目
+
+## 入口链接
+
+- 全局规范：[[standards/data_project上下文全局规范]]
+- 语义字典：[[concepts/营销域语义字典]]
+- 导入报告：[[queries/data_project知识快照导入报告]]
+
+## 知识结构导览
+
+### 表对象分域
+
+- 一、交易订单域：订单表, 订单余额模型_网点版
+- 二、客户资产域：客户信息表, 客户资产汇总表, 客户持仓表, 客户持仓收益表, 客户资产收益表
+- 三、渠道网点域：网点信息表, 订单归属网点关系表, 渠道层级信息维表
+- 四、产品销售商维度域：产品信息维表, 银行产品维度表, 销售商信息维表
+- 五、组织人员域：部门维度表, 员工维度表, 销售人员-部门属性日表
+- 六、归属规则域：部门归属规则维度表, 人员归属规则维度表
+- 七、8倍镜统计表：8倍镜_整体日统计结果表, 8倍镜_日期部门维度统计表, 8倍镜_日期产品维度统计表, 8倍镜_日期渠道部门维度统计表, 8倍镜_日期渠道部门产品维度统计表, 8倍镜_认购汇总表_部门渠道产品维度, 8倍镜_管理费自然日统计表
+- 八、8倍镜维度表：8倍镜_产品信息维表, 8倍镜_产品简称维表, 8倍镜_渠道信息维表
+- 九、其他：银行渠道规模指标表
+- 十、行业分析：基金销售保有规模表
+- 十一、外部数据域 (Wind)：中国银行理财产品基本资料, 中国银行理财产品净值, 中国共同基金基本资料, 中国共同基金净值, 中国共同基金投资组合——资产配置, 中国共同基金投资组合——持股明细
+
+### 规则总体结构
+
+- 规则总数：`21`
+- 规则 ID 列表：`R_Null_Safe_Arithmetic`, `R_Trd_Type`, `R_Accumulate`, `R_Attribution`, `R_Employee_Attribution`, `R_Broker_Attribution`, `R_Fund_Acco_Channel_Mapping`, `R_Order_Balance_Snapshot`, `R_Retention_Rate`, `R_Profit_Customer_Ratio`, `R_8x_Mirror_Assessment`, `R_8x_Subscribe_Stats`, `R_8x_Agency_Fund_Stats`, `R_Performance_Scale`, `R_Inst_Class`, `R_Broker_Sales`, `R_Broker_Holdings`, `R_Industry_Agency_Map`, `R_Trading_Day_Mapping`, `R_HK_Stock_Holdings`, `R_Dividend_Mode_Ratio`
+
+### 字典分组
+
+- 1. 核心枚举值 (Enums)：渠道编码 (chn_num), 分红方式代码 (bons_mode_code), 策略组 (strategy_group), 部门代码/部门名称 (AGENCYBELONG), 交易类型 (ta_trd_mode_code), 客户类别代码 (cust_clas_code), 机构类型 (inst_type) - 券商渠道部专用
+- 2. 术语定义 (Glossary)：订单相关, 产品相关, 客户资产相关, 渠道相关, 规则匹配相关, 8倍镜统计相关 (8x Mirror Stats)
+- 3. 表命名规范 (Naming Conventions)：库名映射 (Database Mapping), 命名规则 (Naming Rules)
+- 4. 行业数据映射 (Industry Data Mapping)：机构名称清洗规则 (Agency Name Cleaning), 机构别名映射 (Agency Alias Mapping)
+
+## 关系索引
+
+### rule -> table
+
+- `R_Null_Safe_Arithmetic` -> 无显式命中
+- `R_Trd_Type` -> 无显式命中
+- `R_Accumulate` -> 无显式命中
+- `R_Attribution` -> 无显式命中
+- `R_Employee_Attribution` -> `DWMS_DIM_EMPLOYEE`
+- `R_Broker_Attribution` -> `DWD_CUST_PR_DTL_DI`, `DWMS_8_DIM_AGENCY_INFO`, `DWMS_DIM_EMPLOYEE`
+- `R_Fund_Acco_Channel_Mapping` -> `DWD_CUST_PR_DTL_DI`
+- `R_Order_Balance_Snapshot` -> 无显式命中
+- `R_Retention_Rate` -> 无显式命中
+- `R_Profit_Customer_Ratio` -> 无显式命中
+- `R_8x_Mirror_Assessment` -> 无显式命中
+- `R_8x_Subscribe_Stats` -> `DWMS_8_SUB_AGENCY_FUND`
+- `R_8x_Agency_Fund_Stats` -> `DWMS_8_DIM_AGENCY_INFO`, `DWMS_8_DIM_FUND_INFO`, `DWMS_V_8_DAY_AGENCY_FUND_HIVE`
+- `R_Performance_Scale` -> 无显式命中
+- `R_Inst_Class` -> 无显式命中
+- `R_Broker_Sales` -> `DWD_CUST_PR_DTL_DI`
+- `R_Broker_Holdings` -> 无显式命中
+- `R_Industry_Agency_Map` -> `DWMS_8_DIM_AGENCY_INFO`
+- `R_Trading_Day_Mapping` -> `DWMS_V_8_DAY_AGENCY_FUND_HIVE`
+- `R_HK_Stock_Holdings` -> `CHINAMUTUALFUNDASSETPORTFOLIO`, `CHINAMUTUALFUNDSTOCKPORTFOLIO`
+- `R_Dividend_Mode_Ratio` -> 无显式命中
+
+### rule -> dictionary
+
+- `R_Null_Safe_Arithmetic` -> 无显式命中
+- `R_Trd_Type` -> `交易类型 (ta_trd_mode_code)`
+- `R_Accumulate` -> 无显式命中
+- `R_Attribution` -> `策略组 (strategy_group)`
+- `R_Employee_Attribution` -> `策略组 (strategy_group)`
+- `R_Broker_Attribution` -> `策略组 (strategy_group)`, `部门代码/部门名称 (AGENCYBELONG)`
+- `R_Fund_Acco_Channel_Mapping` -> 无显式命中
+- `R_Order_Balance_Snapshot` -> 无显式命中
+- `R_Retention_Rate` -> 无显式命中
+- `R_Profit_Customer_Ratio` -> `客户类别代码 (cust_clas_code)`
+- `R_8x_Mirror_Assessment` -> 无显式命中
+- `R_8x_Subscribe_Stats` -> `部门代码/部门名称 (AGENCYBELONG)`
+- `R_8x_Agency_Fund_Stats` -> `部门代码/部门名称 (AGENCYBELONG)`
+- `R_Performance_Scale` -> `部门代码/部门名称 (AGENCYBELONG)`
+- `R_Inst_Class` -> `机构类型 (inst_type) - 券商渠道部专用`
+- `R_Broker_Sales` -> `交易类型 (ta_trd_mode_code)`
+- `R_Broker_Holdings` -> 无显式命中
+- `R_Industry_Agency_Map` -> `机构别名映射 (Agency Alias Mapping)`
+- `R_Trading_Day_Mapping` -> 无显式命中
+- `R_HK_Stock_Holdings` -> 无显式命中
+- `R_Dividend_Mode_Ratio` -> `分红方式代码 (bons_mode_code)`
+
+### table -> dictionary
+
+- `DWD_CUST_PR_DTL_DI` -> `交易类型 (ta_trd_mode_code)`, `渠道编码 (chn_num)`, `策略组 (strategy_group)`
+- `CDM_DWD_AST_ORDE_BAL_MORE_DF` -> 无显式命中
+- `CDM_DIM_CUST_F` -> `客户类别代码 (cust_clas_code)`
+- `CDM_DWMS_CUSTOMER_ASSETS_SUM_DF` -> 无显式命中
+- `DWD_AST_CUST_HLDP_DI` -> `分红方式代码 (bons_mode_code)`, `渠道编码 (chn_num)`
+- `DWS_AST_CUST_HLDP_PAYF_DI` -> `分红方式代码 (bons_mode_code)`, `渠道编码 (chn_num)`
+- `CDM_DWMS_CUSTOMER_HOLD_INFO_DF` -> 无显式命中
+- `CR_TJJ_QD_QDXX` -> 无显式命中
+- `CR_T_QD_CFJG_JY` -> 无显式命中
+- `CDM_DIM_SEG_CHN_INFO_F` -> 无显式命中
+- `DIM_TA_PD_F` -> 无显式命中
+- `CDM_DWMS_DIM_BANK_PD_F` -> `渠道相关`
+- `DIM_RETL_INFO_F` -> 无显式命中
+- `DWMS_DIM_DEPARTMENT` -> 无显式命中
+- `DWMS_DIM_EMPLOYEE` -> 无显式命中
+- `CDM_DWMS_SALR_BRCH_ATTR_DF` -> 无显式命中
+- `DWMS_DIM_RULES_DEPARTMENT` -> `策略组 (strategy_group)`
+- `DWMS_DIM_RULES_EMPLOYEE` -> `策略组 (strategy_group)`
+- `dwms_v_8_day_all_hive` -> 无显式命中
+- `dwms_v_8_day_belong_hive` -> `部门代码/部门名称 (AGENCYBELONG)`
+- `dwms_v_8_day_fund_hive` -> 无显式命中
+- `dwms_v_8_day_agency_hive` -> 无显式命中
+- `DWMS_V_8_DAY_AGENCY_FUND_HIVE` -> `部门代码/部门名称 (AGENCYBELONG)`
+- `DWMS_8_SUB_AGENCY_FUND` -> `交易类型 (ta_trd_mode_code)`, `部门代码/部门名称 (AGENCYBELONG)`
+- `DWMS_8_DAY_FEE_H` -> `部门代码/部门名称 (AGENCYBELONG)`
+- `DWMS_8_DIM_FUND_INFO` -> 无显式命中
+- `DWMS_8_DIM_FUND_SHORTNAME` -> 无显式命中
+- `DWMS_8_DIM_AGENCY_INFO` -> `渠道编码 (chn_num)`, `部门代码/部门名称 (AGENCYBELONG)`
+- `BI_BANKSPLITAUTO_SHARES_DF` -> 无显式命中
+- `SALE_NET_AMOUNT_V2` -> 无显式命中
+- `CHINABWMDESC` -> 无显式命中
+- `CHINABWMNAV` -> 无显式命中
+- `CHINAMUTUALFUNDDESCRIPTION` -> 无显式命中
+- `CHINAMUTUALFUNDNAV` -> 无显式命中
+- `CHINAMUTUALFUNDASSETPORTFOLIO` -> 无显式命中
+- `CHINAMUTUALFUNDSTOCKPORTFOLIO` -> 无显式命中
+
+## 与上一快照差异
+
+- comparison_base: `data_project-知识快照-2026-04-23-ca1431d.md`
+- previous_snapshot_id: `data-project:2026-04-23:ca1431d`
+
+### Tables
+
+- new: 无
+- updated: 无
+- unchanged_count: `36`
+- removed: 无
+
+### Rules
+
+- new: 无
+- updated: 无
+- unchanged_count: `21`
+- removed: 无
+
+### Dictionary
+
+- new: 无
+- updated: 无
+- unchanged_count: `17`
+- removed: 无
+
+## 已提升页面
+
+### 数据对象
+
+- [[tables/订单表-DWD_CUST_PR_DTL_DI]] - 订单表（`DWD_CUST_PR_DTL_DI`）
+- [[tables/订单余额模型_网点版-CDM_DWD_AST_ORDE_BAL_MORE_DF]] - 订单余额模型_网点版（`CDM_DWD_AST_ORDE_BAL_MORE_DF`）
+- [[tables/客户信息表-CDM_DIM_CUST_F]] - 客户信息表（`CDM_DIM_CUST_F`）
+- [[tables/客户资产汇总表-CDM_DWMS_CUSTOMER_ASSETS_SUM_DF]] - 客户资产汇总表（`CDM_DWMS_CUSTOMER_ASSETS_SUM_DF`）
+- [[tables/客户持仓表-DWD_AST_CUST_HLDP_DI]] - 客户持仓表（`DWD_AST_CUST_HLDP_DI`）
+- [[tables/客户持仓收益表-DWS_AST_CUST_HLDP_PAYF_DI]] - 客户持仓收益表（`DWS_AST_CUST_HLDP_PAYF_DI`）
+- [[tables/客户资产收益表-CDM_DWMS_CUSTOMER_HOLD_INFO_DF]] - 客户资产收益表（`CDM_DWMS_CUSTOMER_HOLD_INFO_DF`）
+- [[tables/网点信息表-CR_TJJ_QD_QDXX]] - 网点信息表（`CR_TJJ_QD_QDXX`）
+- [[tables/订单归属网点关系表-CR_T_QD_CFJG_JY]] - 订单归属网点关系表（`CR_T_QD_CFJG_JY`）
+- [[tables/渠道层级信息维表-CDM_DIM_SEG_CHN_INFO_F]] - 渠道层级信息维表（`CDM_DIM_SEG_CHN_INFO_F`）
+- [[tables/产品信息维表-DIM_TA_PD_F]] - 产品信息维表（`DIM_TA_PD_F`）
+- [[tables/银行产品维度表-CDM_DWMS_DIM_BANK_PD_F]] - 银行产品维度表（`CDM_DWMS_DIM_BANK_PD_F`）
+- [[tables/销售商信息维表-DIM_RETL_INFO_F]] - 销售商信息维表（`DIM_RETL_INFO_F`）
+- [[tables/部门维度表-DWMS_DIM_DEPARTMENT]] - 部门维度表（`DWMS_DIM_DEPARTMENT`）
+- [[tables/员工维度表-DWMS_DIM_EMPLOYEE]] - 员工维度表（`DWMS_DIM_EMPLOYEE`）
+- [[tables/销售人员-部门属性日表-CDM_DWMS_SALR_BRCH_ATTR_DF]] - 销售人员-部门属性日表（`CDM_DWMS_SALR_BRCH_ATTR_DF`）
+- [[tables/部门归属规则维度表-DWMS_DIM_RULES_DEPARTMENT]] - 部门归属规则维度表（`DWMS_DIM_RULES_DEPARTMENT`）
+- [[tables/人员归属规则维度表-DWMS_DIM_RULES_EMPLOYEE]] - 人员归属规则维度表（`DWMS_DIM_RULES_EMPLOYEE`）
+- [[tables/8倍镜_整体日统计结果表-dwms_v_8_day_all_hive]] - 8倍镜_整体日统计结果表（`dwms_v_8_day_all_hive`）
+- [[tables/8倍镜_日期部门维度统计表-dwms_v_8_day_belong_hive]] - 8倍镜_日期部门维度统计表（`dwms_v_8_day_belong_hive`）
+- [[tables/8倍镜_日期产品维度统计表-dwms_v_8_day_fund_hive]] - 8倍镜_日期产品维度统计表（`dwms_v_8_day_fund_hive`）
+- [[tables/8倍镜_日期渠道部门维度统计表-dwms_v_8_day_agency_hive]] - 8倍镜_日期渠道部门维度统计表（`dwms_v_8_day_agency_hive`）
+- [[tables/8倍镜_日期渠道部门产品维度统计表-DWMS_V_8_DAY_AGENCY_FUND_HIVE]] - 8倍镜_日期渠道部门产品维度统计表（`DWMS_V_8_DAY_AGENCY_FUND_HIVE`）
+- [[tables/8倍镜_认购汇总表_部门渠道产品维度-DWMS_8_SUB_AGENCY_FUND]] - 8倍镜_认购汇总表_部门渠道产品维度（`DWMS_8_SUB_AGENCY_FUND`）
+- [[tables/8倍镜_管理费自然日统计表-DWMS_8_DAY_FEE_H]] - 8倍镜_管理费自然日统计表（`DWMS_8_DAY_FEE_H`）
+- [[tables/8倍镜_产品信息维表-DWMS_8_DIM_FUND_INFO]] - 8倍镜_产品信息维表（`DWMS_8_DIM_FUND_INFO`）
+- [[tables/8倍镜_产品简称维表-DWMS_8_DIM_FUND_SHORTNAME]] - 8倍镜_产品简称维表（`DWMS_8_DIM_FUND_SHORTNAME`）
+- [[tables/8倍镜_渠道信息维表-DWMS_8_DIM_AGENCY_INFO]] - 8倍镜_渠道信息维表（`DWMS_8_DIM_AGENCY_INFO`）
+- [[tables/银行渠道规模指标表-BI_BANKSPLITAUTO_SHARES_DF]] - 银行渠道规模指标表（`BI_BANKSPLITAUTO_SHARES_DF`）
+- [[tables/基金销售保有规模表-SALE_NET_AMOUNT_V2]] - 基金销售保有规模表（`SALE_NET_AMOUNT_V2`）
+- [[tables/中国银行理财产品基本资料-CHINABWMDESC]] - 中国银行理财产品基本资料（`CHINABWMDESC`）
+- [[tables/中国银行理财产品净值-CHINABWMNAV]] - 中国银行理财产品净值（`CHINABWMNAV`）
+- [[tables/中国共同基金基本资料-CHINAMUTUALFUNDDESCRIPTION]] - 中国共同基金基本资料（`CHINAMUTUALFUNDDESCRIPTION`）
+- [[tables/中国共同基金净值-CHINAMUTUALFUNDNAV]] - 中国共同基金净值（`CHINAMUTUALFUNDNAV`）
+- [[tables/中国共同基金投资组合——资产配置-CHINAMUTUALFUNDASSETPORTFOLIO]] - 中国共同基金投资组合——资产配置（`CHINAMUTUALFUNDASSETPORTFOLIO`）
+- [[tables/中国共同基金投资组合——持股明细-CHINAMUTUALFUNDSTOCKPORTFOLIO]] - 中国共同基金投资组合——持股明细（`CHINAMUTUALFUNDSTOCKPORTFOLIO`）
+
+### 业务规则
+
+- [[rules/NULL值安全处理-R_Null_Safe_Arithmetic]] - NULL值安全处理（`R_Null_Safe_Arithmetic`）
+- [[rules/交易类型判定-R_Trd_Type]] - 交易类型判定（`R_Trd_Type`）
+- [[rules/累计指标计算-R_Accumulate]] - 累计指标计算（`R_Accumulate`）
+- [[rules/业绩归属策略-R_Attribution]] - 业绩归属策略（`R_Attribution`）
+- [[rules/银行渠道部员工归属策略-R_Employee_Attribution]] - 银行渠道部员工归属策略（`R_Employee_Attribution`）
+- [[rules/券商渠道部员工归属策略-R_Broker_Attribution]] - 券商渠道部员工归属策略（`R_Broker_Attribution`）
+- [[rules/基金账号渠道映射-R_Fund_Acco_Channel_Mapping]] - 基金账号渠道映射（`R_Fund_Acco_Channel_Mapping`）
+- [[rules/订单余额快照过滤-R_Order_Balance_Snapshot]] - 订单余额快照过滤（`R_Order_Balance_Snapshot`）
+- [[rules/留存率计算-R_Retention_Rate]] - 留存率计算（`R_Retention_Rate`）
+- [[rules/正收益客户占比计算-R_Profit_Customer_Ratio]] - 正收益客户占比计算（`R_Profit_Customer_Ratio`）
+- [[rules/8倍镜零售财务考核口径-R_8x_Mirror_Assessment]] - 8倍镜零售财务考核口径（`R_8x_Mirror_Assessment`）
+- [[rules/8倍镜认购统计-R_8x_Subscribe_Stats]] - 8倍镜认购统计（`R_8x_Subscribe_Stats`）
+- [[rules/8倍镜渠道产品申赎统计-R_8x_Agency_Fund_Stats]] - 8倍镜渠道产品申赎统计（`R_8x_Agency_Fund_Stats`）
+- [[rules/绩效规模计算-R_Performance_Scale]] - 绩效规模计算（`R_Performance_Scale`）
+- [[rules/机构类型分类-R_Inst_Class]] - 机构类型分类（`R_Inst_Class`）
+- [[rules/券商渠道部销量统计-R_Broker_Sales]] - 券商渠道部销量统计（`R_Broker_Sales`）
+- [[rules/券商渠道部保有规模统计-R_Broker_Holdings]] - 券商渠道部保有规模统计（`R_Broker_Holdings`）
+- [[rules/行业机构名称匹配-R_Industry_Agency_Map]] - 行业机构名称匹配（`R_Industry_Agency_Map`）
+- [[rules/交易日映射优化-R_Trading_Day_Mapping]] - 交易日映射优化（`R_Trading_Day_Mapping`）
+- [[rules/港股资产持仓判定-R_HK_Stock_Holdings]] - 港股资产持仓判定（`R_HK_Stock_Holdings`）
+- [[rules/分红方式占比计算-R_Dividend_Mode_Ratio]] - 分红方式占比计算（`R_Dividend_Mode_Ratio`）
+
+## 使用边界
+
+- 本次导入只吸收 `context/tables.md`、`context/rules.md`、`context/dictionary.md` 的快照内容。
+- 结构化页面用于检索、问答和后续合并；完整证据仍以 raw 快照为追溯来源。
+- 跨项目冲突不在本页直接裁决，后续应在 wiki 层显式保留来源、版本和差异。
