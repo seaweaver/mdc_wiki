@@ -141,3 +141,20 @@
 - Clarified the boundary between local project knowledge bases, self-contained knowledge snapshots, and the business-domain wiki
 - Documented the roles of `context-snapshot` and `mdc-wiki`, including export, raw archive, page promotion, review, and incremental evolution
 - Updated `index.md` to register the new standard page
+
+## [2026-04-24] update | 知识快照稳定身份合并规则
+
+- Updated `SCHEMA.md` to require self-contained knowledge snapshots to be merged by stable identity, not by filename, title, or display language
+- Clarified merge keys for project pages, raw version equivalence, data-object pages, rule pages, and dictionary/concept pages
+- Documented that Chinese naming changes with unchanged `project_id` and `source_content_hash` are metadata upgrades, not new projects
+
+## [2026-04-24] ingest | 营销域数据分析项目中文命名知识快照
+
+- Archived immutable raw copy: `raw/knowledge-snapshots/data-project/营销域数据分析项目-知识快照-2026-04-24-bc37852.md`
+- Matched existing project by `project_id=data-project` and `source_content_hash=8db680bd642d5917`
+- Updated project-level pages, import report, semantic dictionary metadata, and `index.md` display text to prefer `营销域数据分析项目`
+- Did not create duplicate `tables/`, `rules/`, `concepts/`, or project entry pages because all `36` table keys and `21` rule IDs already existed
+- Renamed project-level pages to Chinese filenames and rewired existing wikilinks:
+  `scenarios/营销域数据分析项目知识快照导入.md`,
+  `queries/营销域数据分析项目知识快照导入报告.md`,
+  `standards/营销域数据分析项目上下文全局规范.md`

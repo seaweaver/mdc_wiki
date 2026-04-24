@@ -19,7 +19,7 @@ status: active
 - 快照 ID：`data-project:2026-04-24:bc37852`
 - 来源工件：`raw/knowledge-snapshots/data-project/data_project-知识快照-2026-04-24-bc37852.md`
 - 相关字典：[[concepts/营销域语义字典]]
-- 项目入口：[[scenarios/data_project知识快照导入]]
+- 项目入口：[[scenarios/营销域数据分析项目知识快照导入]]
 
 ## 快照事实
 

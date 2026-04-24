@@ -16,7 +16,7 @@
 - [[tables/数据对象目录说明]] - 数据对象目录说明
 
 <!-- data-project-tables:start -->
-### data_project 数据对象
+### 营销域数据分析项目（data_project）数据对象
 
 - [[tables/订单表-DWD_CUST_PR_DTL_DI]] - 订单表（`DWD_CUST_PR_DTL_DI`）
 - [[tables/订单余额模型_网点版-CDM_DWD_AST_ORDE_BAL_MORE_DF]] - 订单余额模型_网点版（`CDM_DWD_AST_ORDE_BAL_MORE_DF`）
@@ -79,7 +79,7 @@
 - [[rules/蚂蚁提报后监控规则]] - 蚂蚁提报后监控规则
 
 <!-- data-project-rules:start -->
-### data_project 业务规则
+### 营销域数据分析项目（data_project）业务规则
 
 - [[rules/NULL值安全处理-R_Null_Safe_Arithmetic]] - NULL值安全处理（`R_Null_Safe_Arithmetic`）
 - [[rules/交易类型判定-R_Trd_Type]] - 交易类型判定（`R_Trd_Type`）
@@ -120,7 +120,7 @@
 - [[scenarios/蚂蚁选品验证案例]] - 蚂蚁选品验证案例
 
 <!-- data-project-scenarios:start -->
-- [[scenarios/data_project知识快照导入]] - data_project 知识快照导入入口
+- [[scenarios/营销域数据分析项目知识快照导入]] - 营销域数据分析项目知识快照导入入口
 <!-- data-project-scenarios:end -->
 
 ## Capabilities｜能力资产
@@ -146,7 +146,7 @@
 - [[standards/知识沉淀工作流]] - 局部项目知识库通过知识快照汇入业务域 wiki 的标准流程
 
 <!-- data-project-standards:start -->
-- [[standards/data_project上下文全局规范]] - data_project 的 SQL、平台、上下文全局约束
+- [[standards/营销域数据分析项目上下文全局规范]] - 营销域数据分析项目的 SQL、平台、上下文全局约束
 <!-- data-project-standards:end -->
 
 ## Atomic Knowledge Types｜原子知识类型
@@ -198,11 +198,11 @@
 - [[concepts/预警分级机制]] - 用于统一解释一级、二级、三级预警的分层判断
 
 <!-- data-project-concepts:start -->
-- [[concepts/营销域语义字典]] - data_project 导出的营销域字典、枚举、字段语义和清洗规则
+- [[concepts/营销域语义字典]] - 营销域数据分析项目导出的营销域字典、枚举、字段语义和清洗规则
 <!-- data-project-concepts:end -->
 
 ### Queries｜问答页
 
 <!-- data-project-queries:start -->
-- [[queries/data_project知识快照导入报告]] - data_project 知识快照导入复核报告
+- [[queries/营销域数据分析项目知识快照导入报告]] - 营销域数据分析项目知识快照导入复核报告
 <!-- data-project-queries:end -->
