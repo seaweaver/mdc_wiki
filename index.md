@@ -1,7 +1,7 @@
 # Wiki Index
 
 > 面向 agent 的零售业务与数据协同知识目录。
-> Last updated: 2026-04-24 | Total pages: 107
+> Last updated: 2026-04-30 | Total pages: 138
 
 ## Tables｜表与数据对象
 
@@ -56,6 +56,31 @@
 - [[tables/中国共同基金投资组合——持股明细-CHINAMUTUALFUNDSTOCKPORTFOLIO]] - 中国共同基金投资组合——持股明细（`CHINAMUTUALFUNDSTOCKPORTFOLIO`）
 <!-- data-project-tables:end -->
 
+<!-- qudaojiankong-tables:start -->
+### 蚂蚁渠道基金产品提报监控（qudaojiankong）数据对象
+
+- [[tables/蚂蚁渠道监控指标宽表-DM_JKQD_FUND_METRICS]] - 蚂蚁渠道监控指标结果表（`DM_JKQD_FUND_METRICS`）
+- [[tables/蚂蚁渠道监控指标窄表-T_DM_JKQD_FUND_METRICS]] - 中间工作表（`T_DM_JKQD_FUND_METRICS`）
+- [[tables/基金池入口表-TMP_JKQD_FUND_METRICS]] - 基金池入口表（`TMP_JKQD_FUND_METRICS`）
+- [[tables/债券久期中间表-TMP_BOND_LAST_DURATION]] - 债券久期中间表（`TMP_BOND_LAST_DURATION`）
+- [[tables/中国共同基金基金经理-ChinaMutualFundManager]] - 基金经理任职记录（`ChinaMutualFundManager`）
+- [[tables/中国共同基金业绩表现-ChinaMFPerformance]] - Wind 直取收益率（`ChinaMFPerformance`）
+- [[tables/中国共同基金指数行情-CMFIndexEOD]] - 货币市场指数行情（`CMFIndexEOD`）
+- [[tables/中国共同基金投资组合持券明细-ChinaMutualFundBondPortfolio]] - 季度债券持仓明细（`ChinaMutualFundBondPortfolio`）
+- [[tables/中国债券衍生指标-CBondValuation]] - 债券久期数据（`CBondValuation`）
+- [[tables/中国共同基金滚动运作周期-CMFundOperatePeriod]] - 封闭运作周期（`CMFundOperatePeriod`）
+- [[tables/内部产品维表-分级-V5_DIM_PRODUCT]] - 分级产品维度表（`V5_DIM_PRODUCT`）
+- [[tables/内部产品维表-非分级-V6_DIM_PRODUCT]] - 非分级产品维度表（`V6_DIM_PRODUCT`）
+- [[tables/产品维表-组合映射-V2_DIM_PRODUCT]] - 产品与组合映射表（`V2_DIM_PRODUCT`）
+- [[tables/分级产品规模口径-V_VW_073_FJCP]] - 分级产品规模数据（`V_VW_073_FJCP`）
+- [[tables/非分级组合规模口径-A025_KB_ZTBH_SUM]] - 非分级组合规模汇总（`A025_KB_ZTBH_SUM`）
+- [[tables/债券分类视图-V_JKQD_TXFL]] - 天相L4债券分类视图（`V_JKQD_TXFL`）
+- [[tables/持有期封闭期配置-MD_PROD_CXQ_CFG]] - 持有期配置（`MD_PROD_CXQ_CFG`）
+- [[tables/PLMS-公募基金信息-PLMS2_TPDTFUNDINFO]] - PLMS公募基金信息（`PLMS2_TPDTFUNDINFO`）
+- [[tables/PLMS-基金竖表字段-PLMS2_TFUNDINFOVERTICAL]] - PLMS基金竖表字段（`PLMS2_TFUNDINFOVERTICAL`）
+- [[tables/交易日历-MD_PUB_DATE_INFO]] - 系统交易日历（`MD_PUB_DATE_INFO`）
+<!-- qudaojiankong-tables:end -->
+
 ## Rules｜业务规则与指标
 
 用途：
@@ -104,6 +129,20 @@
 - [[rules/分红方式占比计算-R_Dividend_Mode_Ratio]] - 分红方式占比计算（`R_Dividend_Mode_Ratio`）
 <!-- data-project-rules:end -->
 
+<!-- qudaojiankong-rules:start -->
+### 蚂蚁渠道基金产品提报监控（qudaojiankong）加工规则
+
+- [[rules/基础参数与过滤]] - R01 业务日期、R02 基金池过滤、R24 产品代码格式
+- [[rules/产品信息与规模]] - R03 成立时长、R04 基金规模计算
+- [[rules/基金经理关联]] - R05 同基金经理产品、R06 投资年限与公募经验
+- [[rules/收益与胜率计算]] - R07 月度/季度/年度胜率、R08 收益率计算
+- [[rules/超额收益与同类排名]] - R09 跑赢货币指数概率、R10 货基指数、R11 同类排名
+- [[rules/正收益概率与排名]] - R12 持有期正收益概率、R13 同类排名
+- [[rules/回撤与风险计算]] - R14 最大回撤、R15 最大日回撤、R16 连续回撤天数
+- [[rules/仓位久期与期限结构]] - R17 含权仓位、R18 平均仓位、R19 仓位字符串、R20 组合久期、R21 持有期类型
+- [[rules/封闭期与聚合规则]] - R22 封闭期正收益概率、R23 窄表→宽表MERGE聚合
+<!-- qudaojiankong-rules:end -->
+
 ## Scenarios｜业务场景与项目
 
 用途：
@@ -122,6 +161,10 @@
 <!-- data-project-scenarios:start -->
 - [[scenarios/营销域数据分析项目知识快照导入]] - 营销域数据分析项目知识快照导入入口
 <!-- data-project-scenarios:end -->
+
+<!-- qudaojiankong-scenarios:start -->
+- [[scenarios/蚂蚁渠道基金产品提报监控-数据加工]] - 蚂蚁渠道基金产品提报监控数据加工层入口
+<!-- qudaojiankong-scenarios:end -->
 
 ## Capabilities｜能力资产
 
@@ -200,6 +243,10 @@
 <!-- data-project-concepts:start -->
 - [[concepts/营销域语义字典]] - 营销域数据分析项目导出的营销域字典、枚举、字段语义和清洗规则
 <!-- data-project-concepts:end -->
+
+<!-- qudaojiankong-concepts:start -->
+- [[concepts/营销域数据加工字典]] - 蚂蚁渠道项目的数据加工层字典、枚举值、精度约定和术语定义
+<!-- qudaojiankong-concepts:end -->
 
 ### Queries｜问答页
 

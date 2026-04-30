@@ -158,3 +158,21 @@
   `scenarios/营销域数据分析项目知识快照导入.md`,
   `queries/营销域数据分析项目知识快照导入报告.md`,
   `standards/营销域数据分析项目上下文全局规范.md`
+
+## [2026-04-30] ingest | 蚂蚁渠道基金产品提报监控数据加工层导入
+
+- 来源：知识快照 `qudaojiankong:2026-04-30:b722ebd`，归档于 `raw/knowledge-snapshots/qudaojiankong/`
+- 此快照为项目的数据加工层（物理表、加工规则、字典），与已有的业务规则层形成上下两层对应
+- 导入内容：
+  - 场景页 1 个：`scenarios/蚂蚁渠道基金产品提报监控-数据加工.md`
+  - 表页 20 个：4 张项目核心表 + 6 张 Wind 源表 + 10 张 Oracle 内部源表
+  - 更新已有表页 3 个：ChinaMutualFundNAV、ChinaMutualFundDescription、ChinaMutualFundAssetPortfolio（追加 qudaojiankong 使用说明）
+  - 规则页 9 个：按功能分组的加工规则 R01-R24
+  - 概念页 1 个：`concepts/营销域数据加工字典.md`
+- 更新 `index.md` 登记所有新页面，总页数 107 → 138
+- 快照内容哈希：`2fc00cf9bcd545a3`
+
+## [2026-04-30] update | 规则页文件重命名，去掉 qudaojiankong- 前缀改为纯中文命名
+
+- 9 个规则分组页从 `qudaojiankong-*.md` 重命名为纯中文文件名
+- 同步更新 index.md、场景入口页、20 张表页面、规则页内所有 wikilinks 引用
